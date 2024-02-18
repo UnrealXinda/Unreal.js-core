@@ -83,11 +83,6 @@ public class V8 : ModuleRules
             bHasZlib = true;
 
         }
-		else if (Target.Platform == UnrealTargetPlatform.Linux)
-        {
-            PlatformSubdir = Path.Combine(PlatformSubdir, Target.Architecture);
-        }
-
         PrivateDependencyModuleNames.Add("libWebSockets");
 
         if (bHasZlib)

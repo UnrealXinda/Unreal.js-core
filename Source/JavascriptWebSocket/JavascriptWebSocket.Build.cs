@@ -45,10 +45,6 @@ public class JavascriptWebSocket : ModuleRules
             PlatformSubdir = Path.Combine(PlatformSubdir, "VS" + Target.WindowsPlatform.GetVisualStudioCompilerVersionName());
             bHasZlib = true;
 
-        }        
-		else if (Target.Platform == UnrealTargetPlatform.Linux)
-        {
-            PlatformSubdir = Path.Combine(PlatformSubdir, Target.Architecture);
         }
 
         PrivateDependencyModuleNames.Add("libWebSockets");
